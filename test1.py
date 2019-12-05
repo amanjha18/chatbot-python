@@ -23,7 +23,7 @@ def get_a_challenge(challenge_id):
     if len(single)== 0:
         abort(600)
     return jsonify(single[0])   
-
+
 @task.route("/all_challenges/random",methods = ["GET"])
 def get_random_challenge():
     string = random.choice(all_challenges)
